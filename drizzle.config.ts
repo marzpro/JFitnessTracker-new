@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {\rtf1\ansi\ansicpg1252\cocoartf2821
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
@@ -20,3 +21,19 @@ export default defineConfig(\{\
   \},\
 \});\
 }
+=======
+import { defineConfig } from "drizzle-kit";
+
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL, ensure the database is provisioned");
+}
+
+export default defineConfig({
+  out: "./migrations",
+  schema: "./shared/schema.ts",
+  dialect: "postgresql",
+  dbCredentials: {
+    url: process.env.DATABASE_URL,
+  },
+});
+>>>>>>> 0757d37088bf80c4b46d9b979735b68d79074c34

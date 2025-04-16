@@ -7,7 +7,11 @@
     "noEmit": true,
     "module": "ESNext",
     "strict": true,
+<<<<<<< HEAD
     "lib": ["es2015", "dom", "dom.iterable"],
+=======
+    "lib": ["esnext", "dom", "dom.iterable"],
+>>>>>>> 0757d37088bf80c4b46d9b979735b68d79074c34
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -20,4 +24,8 @@
       "@shared/*": ["./shared/*"]
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0757d37088bf80c4b46d9b979735b68d79074c34

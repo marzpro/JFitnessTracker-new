@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {\rtf1\ansi\ansicpg1252\cocoartf2821
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
@@ -12,3 +13,11 @@
   \},\
 \}\
 }
+=======
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+>>>>>>> 0757d37088bf80c4b46d9b979735b68d79074c34
