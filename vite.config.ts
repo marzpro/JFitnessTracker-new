@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
 export default defineConfig({
-  root: ".", // ✨ <-- this is critical
   plugins: [react()],
   resolve: {
     alias: {
@@ -15,6 +14,9 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: resolve(__dirname, "index.html") // ✨ this tells Vite EXACTLY where your entry is
+    }
   }
 });
