@@ -5,26 +5,20 @@ import { z } from "zod";
 import { insertProgressSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // API routes
-
-  // Get meals for a specific day
   app.get("/api/meals/:day", async (req, res) => {
     const { day } = req.params;
     if (!day) {
       return res.status(400).json({ message: "Day parameter is required" });
     }
-
     const meals = await storage.getMealsByDay(day.toLowerCase());
     return res.json(meals);
   });
 
-  // Get workout for a specific day
   app.get("/api/workouts/:day", async (req, res) => {
     const { day } = req.params;
     if (!day) {
       return res.status(400).json({ message: "Day parameter is required" });
     }
-
     const workout = await storage.getWorkoutByDay(day.toLowerCase());
     if (!workout) {
       return res.status(404).json({ message: "Workout not found" });
@@ -44,13 +38,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         { name: "Barbell Bench Press", repsAndWeight: "4x8-10 (30-40 kg)" },
         { name: "Seated Dumbbell Shoulder Press", repsAndWeight: "3x10 (7-10 kg each)" },
       ],
-      // Add more days here if needed
     };
 
     return res.json(dayToExercisesMap[day.toLowerCase()] || []);
   });
-
-  // More routes can be added here...
 
   return createServer(app);
 }
