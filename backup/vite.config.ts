@@ -6,14 +6,14 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src")
-    }
+      "@": resolve(__dirname, "./src"),
+    },
   },
   server: {
-    port: 3000
+    port: 3000,
   },
   build: {
     outDir: "dist",
-    emptyOutDir: true
-  }
+    emptyOutDir: true,
+  },
 });
