@@ -1,4 +1,4 @@
-import { IStorage } from "../../storage";
+import { IStorage } from "../storage";
 import { workoutPlan } from "./workoutPlan";
 import { mealPlan } from "./mealPlan";
 

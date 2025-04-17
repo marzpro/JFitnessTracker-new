@@ -1,11 +1,11 @@
 import {
-  users, type User, type InsertUser,
-  meals, type Meal, type InsertMeal,
-  workouts, type Workout, type InsertWorkout,
-  exercises, type Exercise, type InsertExercise,
-  progress, type Progress, type InsertProgress,
-  reminders, type Reminder, type InsertReminder,
-  notificationSettings, type NotificationSettings, type InsertNotificationSettings
+  User, type InsertUser,
+  Meal, type InsertMeal,
+  Workout, type InsertWorkout,
+  Exercise, type InsertExercise,
+  Progress, type InsertProgress,
+  Reminder, type InsertReminder,
+  NotificationSettings, type InsertNotificationSettings
 } from "./shared/schema";
 
 export interface IStorage {

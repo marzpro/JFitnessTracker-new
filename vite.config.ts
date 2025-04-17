@@ -14,9 +14,6 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    emptyOutDir: true,
-    rollupOptions: {
-      input: resolve(__dirname, "index.html") // ✨ this tells Vite EXACTLY where your entry is
-    }
+    emptyOutDir: true
   }
 });
